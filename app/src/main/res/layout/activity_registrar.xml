@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#4D5B98A8"
+    tools:context=".Registrar">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="15dp">
+
+        <TextView
+            android:id="@+id/RegistrarTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/titleSignup"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+        <!--Imagen Logo-->
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/RegistrarLogo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_below="@id/RegistrarTxt"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:src="@drawable/logo" />
+        <!--CORREO-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/RegistrarLogo"
+            android:layout_marginTop="30dp"
+            android:background="#30ffffff"
+            android:hint="@string/correo"
+            app:hintTextAppearance="@style/Widget.Design.TextInputLayout">
+
+            <EditText
+                android:id="@+id/correoR"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#30ffffff"
+                android:gravity="left"
+                android:inputType="textEmailAddress"
+                android:textSize="15sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--CONTRASEÑA-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/correoR"
+            android:layout_marginTop="15dp"
+            android:background="#30ffffff"
+            android:hint="@string/password"
+            app:endIconMode="password_toggle"
+            app:endIconTint="@color/black">
+
+            <EditText
+                android:id="@+id/passwordR"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#30ffffff"
+                android:gravity="left"
+                android:inputType="textPassword" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--NOMBRES-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/passwordR"
+            android:layout_marginTop="15dp"
+            android:background="#30ffffff"
+            android:gravity="left"
+            android:hint="@string/nombres">
+
+            <EditText
+                android:id="@+id/nombresR"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#30ffffff"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--APELLIDOS-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/nombresR"
+            android:layout_marginTop="15dp"
+            android:background="#30ffffff"
+            android:gravity="left"
+            android:hint="@string/apellidos">
+
+            <EditText
+                android:id="@+id/apellidosR"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#30ffffff"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--EDAD-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/apellidosR"
+            android:layout_marginTop="15dp"
+            android:background="#30ffffff"
+            android:hint="@string/edad">
+
+            <EditText
+                android:id="@+id/edadR"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#30ffffff"
+                android:inputType="numberDecimal" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--TELEFONO-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/edadR"
+            android:layout_marginTop="15dp"
+            android:background="#30ffffff"
+            android:hint="@string/telefono">
+
+            <EditText
+                android:id="@+id/telefonoR"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#30ffffff"
+                android:inputType="numberDecimal" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--Sign up-->
+        <Button
+            android:id="@+id/ButtonR"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/telefonoR"
+            android:layout_marginTop="60dp"
+            android:background="@drawable/btn_personalizado"
+            app:backgroundTint="@color/aplication"
+            android:text="@string/RegistrarBtn"
+            android:textColor="#ffffff" />
+
+    </LinearLayout>
+</ScrollView>

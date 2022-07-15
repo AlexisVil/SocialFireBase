@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Social FireBase</string>
+    <string name="title">Red Firebase</string>
+    <string name="LoginBtn">Login</string>
+    <string name="RegistrarBtn">Registrar</string>
+
+
+    <!--Pantalla Registro-->
+    <string name="titleSignup">Resgistrarse</string>
+    <string name="correo">example@gmail.com</string>
+    <string name="nombres">Nombre(s)</string>
+    <string name="password">Contraseña</string>
+    <string name="apellidos">Apellidos</string>
+    <string name="edad">Edad</string>
+    <string name="telefono">Telefono</string>
+
+    <!--Pantalla Login-->
+    <string name="titleLogin">Social firebase</string>
+    <string name="correoLogin">Correo electrónico</string>
+    <string name="passwordLogin">Contraseña</string>
+    <string name="LoginL">Login</string>
+    
+    
+    <!--Progress Dialog-->
+    <string name="noInicio">No se pudo iniciar sesión, intente nuevamente</string>
+    <string name="btnRetry">Retry</string>
+
+    <!--Inicio activity-->
+    <string name="btnlogout">Cerrar sesión</string>
+
+</resources>

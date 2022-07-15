@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="300dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="15dp"
+    android:background="@color/white"
+    android:layout_gravity="center">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/noInicio"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:gravity="center"
+            />
+        <!---Animation Lottie Files-->
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_marginTop="20dp"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_gravity="center"
+            app:lottie_fileName="64730-crying.json"
+            app:lottie_autoPlay="true"
+            />
+        <Button
+            android:id="@+id/retryBtn"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/btn_personalizado"
+            app:backgroundTint="@color/aplication"
+            android:textColor="@color/white"
+            android:text="@string/btnRetry"
+            />
+    </LinearLayout>
+</androidx.appcompat.widget.LinearLayoutCompat>
