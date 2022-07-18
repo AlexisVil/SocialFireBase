@@ -4,11 +4,14 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Patterns;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -28,6 +31,7 @@ public class LoginActivity extends AppCompatActivity {
     private FirebaseAuth firebaseAuth;
     private ProgressDialog progressDialog;
     Dialog dialog;
+    AlertDialog alertDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -75,8 +79,20 @@ public class LoginActivity extends AppCompatActivity {
 
     /**Metodo para logear usuario**/
     private void loginUsuario(String correo, String pass) {
+        /*
+        progressDialog.setTitle("Ingresando");
+        progressDialog.setMessage("Espere por favor");
         progressDialog.setCancelable(false);
         progressDialog.show();
+        */
+        //AlertDialog.Builder
+        AlertDialog.Builder builder = new AlertDialog.Builder(LoginActivity.this);
+        LayoutInflater inflater = LoginActivity.this.getLayoutInflater();
+        builder.setView(inflater.inflate(R.layout.iniciando_sesion, null));
+        alertDialog = builder.create();
+        alertDialog.show();
+
+
 
         firebaseAuth.signInWithEmailAndPassword(correo, pass)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
@@ -125,6 +141,7 @@ public class LoginActivity extends AppCompatActivity {
         dialog.setCancelable(false);
         dialog.show();
     }
+
 
     /**Metodo para habilitar regreso del action bar**/
     @Override
